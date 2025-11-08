@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -34,13 +36,23 @@ export default function Home() {
     fetchData();
   }, [])
 
+  //JSX PART FINALLY
+
   return (
       <main className="min-h-screen bg-gray-50 text-gray-800">
-        <div>
+        <div className = "flex flex-col items-center justify-center h-[70vh] text-center px-6"> 
+          <h1 className = "text-5xl font bold mb-4"> Sky Image Dataset </h1>
           <p>
-            
+            A minute-resolution dataset of sky images
           </p>
+
+          <a href="link to dset" className = "px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
+            View Dataset
+          </a>
+
         </div>
+
+
       </main>
         
   );
